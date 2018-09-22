@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">LES2018</string>
+    <string name="identificacao">Login</string>
+    <string name="senha">Senha</string>
+    <string name="confirmasenha">Confirmar senha</string>
+    <string name="realizarlogin">Entrar</string>
+    <string name="realizarcadastro">Cadastrar</string>
+</resources>
