@@ -6,12 +6,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+
+import ipro.les2018.Model.Usuario;
+import ipro.les2018.Model.Validar;
+
 
 public class Cadastro extends AppCompatActivity {
     //Elementos da activitie Cadastro
     private EditText edtLogin,edtSenha,edtConfirmaSenha;
     private TextView btnCadastrar, btnCancelar;
-
+    Usuario user;
+    Validar validar = new Validar ();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
@@ -38,6 +45,18 @@ public class Cadastro extends AppCompatActivity {
 
 
     }
+    public boolean cadastrarUsuario(){
+        String email =edtLogin.getText ().toString (), senha = edtSenha.getText ().toString ();
+        if(validar.validaEmail ( email )&& validar.validaSenha ( senha )) {
+            user = new Usuario ( email, senha );
+            return true;
+        }else{
+            Toast.makeText ( this, "Email ou Senha Fora do Padrão", Toast.LENGTH_SHORT ).show ();
+            return false;
+        }
+    }
+
+
 
     @Override
     public void onBackPressed() {
