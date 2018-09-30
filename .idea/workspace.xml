@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1df8253b-5432-4152-90bd-df5f4729fe6e" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/fileHashes/fileHashes.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.bin" />
-      <change beforePath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" afterPath="$PROJECT_DIR$/.gradle/4.4/taskHistory/taskHistory.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" />
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" afterPath="$PROJECT_DIR$/.idea/gradle.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" afterPath="$PROJECT_DIR$/.idea/modules.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/runConfigurations.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/app/app.iml" afterPath="$PROJECT_DIR$/app/app.iml" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ipro/les2018/Model/Pessoa.java" afterPath="$PROJECT_DIR$/app/src/main/java/ipro/les2018/Model/Pessoa.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ipro/les2018/Model/PessoaFisica.java" afterPath="$PROJECT_DIR$/app/src/main/java/ipro/les2018/Model/PessoaFisica.java" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/ipro/les2018/Model/Usuario.java" afterPath="$PROJECT_DIR$/app/src/main/java/ipro/les2018/Model/Usuario.java" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -76,7 +60,7 @@
       <file leaf-file-name="PessoaFisica.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/ipro/les2018/Model/PessoaFisica.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-735">
+            <state relative-caret-position="462">
               <caret line="22" column="178" lean-forward="false" selection-start-line="22" selection-start-column="178" selection-end-line="22" selection-end-column="178" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -2405,6 +2389,14 @@
       <option name="presentableId" value="Default" />
       <updated>1538336632078</updated>
     </task>
+    <task id="LOCAL-00001" summary="Ajuste das classes">
+      <created>1538337182979</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1538337182979</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -2446,6 +2438,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Ajuste das classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajuste das classes" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -2514,7 +2510,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/ipro/les2018/Model/PessoaFisica.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-735">
+        <state relative-caret-position="462">
           <caret line="22" column="178" lean-forward="false" selection-start-line="22" selection-start-column="178" selection-end-line="22" selection-end-column="178" />
           <folding>
             <element signature="imports" expanded="true" />
