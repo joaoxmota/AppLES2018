@@ -8,8 +8,8 @@ public class Pessoa extends Usuario {
     private String celular;
     private String foto;
 
-    public Pessoa(String email, String senha, String nome, Endereco endereco, String telefone, String celular, String foto) {
-        super ( email, senha );
+    public Pessoa(String email, String senha, String tipo, String nome, Endereco endereco, String telefone, String celular, String foto) {
+        super ( email, senha,tipo );
         this.nome = nome;
         this.endereco = endereco;
         this.telefone = telefone;

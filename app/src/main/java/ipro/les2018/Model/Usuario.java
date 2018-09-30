@@ -3,15 +3,18 @@ package ipro.les2018.Model;
 public class Usuario {
     private String email;
     private String senha;
+    private String tipo;
 
     public Usuario(){
         this.email = "noemail@nodomain.com";
         this.senha = "noPass";
+        this.tipo = "cliente";
     }
 
-    public Usuario(String email, String senha) {
+    public Usuario(String email, String senha, String tipo) {
         this.email = email;
         this.senha = senha;
+        this.tipo = tipo;
     }
 
     public String getEmail() {
@@ -30,6 +33,13 @@ public class Usuario {
         this.senha = senha;
     }
 
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
+    }
 
     @Override
     public String toString() {

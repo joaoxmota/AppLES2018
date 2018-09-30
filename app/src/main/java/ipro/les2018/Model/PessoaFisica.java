@@ -20,8 +20,8 @@ public class PessoaFisica extends Pessoa {
      * @param dataNascimento
      * @param cpf
      */
-    public PessoaFisica(String email, String senha, String nome, Endereco endereco, String telefone, String celular, String foto, Calendar dataNascimento, String cpf,String tipo) {
-        super ( email, senha, nome, endereco, telefone, celular, foto ,tipo);
+    public PessoaFisica(String email, String senha, String tipo, String nome, Endereco endereco, String telefone, String celular, String foto, Calendar dataNascimento, String cpf) {
+        super ( email, senha, tipo, nome, endereco, telefone, celular, foto);
         this.dataNascimento = dataNascimento;
         this.cpf = cpf;
     }
