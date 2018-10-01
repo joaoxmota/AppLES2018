@@ -48,7 +48,7 @@ public class Cadastro extends AppCompatActivity {
     public boolean cadastrarUsuario(){
         String email =edtLogin.getText ().toString (), senha = edtSenha.getText ().toString ();
         if(validar.validaEmail ( email )&& validar.validaSenha ( senha )) {
-            user = new Usuario ( email, senha );
+            user = new Usuario ( email, senha,"cliente" );
             return true;
         }else{
             Toast.makeText ( this, "Email ou Senha Fora do Padrão", Toast.LENGTH_SHORT ).show ();
