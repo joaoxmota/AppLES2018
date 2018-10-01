@@ -9,6 +9,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 
+import ipro.les2018.Model.PessoaFisica;
 import ipro.les2018.Model.Usuario;
 import ipro.les2018.Model.Validar;
 
@@ -43,12 +44,18 @@ public class Cadastro extends AppCompatActivity {
             }
         } );
 
+        PessoaFisica pesFis = new PessoaFisica ();
 
     }
+
+    /**
+     * Metodo executado para cadastrar novo usuario, caso seja validado o email e senha fornecidos
+     * @return true or false
+     */
     public boolean cadastrarUsuario(){
-        String email =edtLogin.getText ().toString (), senha = edtSenha.getText ().toString ();
+        String email =edtLogin.getText ().toString (), senha = edtSenha.getText ().toString (), tipo = "pessoa_fisica";
         if(validar.validaEmail ( email )&& validar.validaSenha ( senha )) {
-            user = new Usuario ( email, senha );
+            user = new Usuario ( email, senha, tipo );
             return true;
         }else{
             Toast.makeText ( this, "Email ou Senha Fora do Padrão", Toast.LENGTH_SHORT ).show ();
@@ -57,7 +64,9 @@ public class Cadastro extends AppCompatActivity {
     }
 
 
-
+    /**
+     * Retorna para a tela de Login caso seja  precionada a tecla Retornar
+     */
     @Override
     public void onBackPressed() {
         Intent it = new Intent ( this, Login.class );
