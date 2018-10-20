@@ -20,11 +20,12 @@ public class PessoaFisica extends Pessoa {
      * @param dataNascimento
      * @param cpf
      */
-    public PessoaFisica(String email, String senha, String tipo, String nome, Endereco endereco, String telefone, String celular, String foto, Calendar dataNascimento, String cpf) {
-        super ( email, senha, tipo, nome, endereco, telefone, celular, foto);
+    public PessoaFisica(String email, String senha, String tipo, String status_usuario, String nome, Endereco endereco, String telefone, String celular, String foto, Calendar dataNascimento, String cpf) {
+        super ( email, senha, tipo, nome, endereco, telefone, celular, foto, status_usuario );
         this.dataNascimento = dataNascimento;
         this.cpf = cpf;
     }
+
 
     /**
      * Inicializa PessoaFisica e Pessoa com valores extritos, Usuario é inicializado com o construtor padrão (VAZIOS)

@@ -4,17 +4,20 @@ public class Usuario {
     private String email;
     private String senha;
     private String tipo;
+    private String usuario_status;
 
     public Usuario(){
         this.email = "noemail@nodomain.com";
         this.senha = "noPass";
         this.tipo = "cliente";
+        this.usuario_status = "ativo";
     }
 
-    public Usuario(String email, String senha, String tipo) {
+    public Usuario(String email, String senha, String tipo, String usuario_ativo) {
         this.email = email;
         this.senha = senha;
         this.tipo = tipo;
+        this.usuario_status = "ativo";
     }
 
     public String getEmail() {
@@ -41,8 +44,19 @@ public class Usuario {
         this.tipo = tipo;
     }
 
+    public String getUsuario_status() {
+        return usuario_status;
+    }
+
+    public void setUsuario_status(String usuario_status) {
+        this.usuario_status = usuario_status;
+    }
+
+
     @Override
     public String toString() {
-        return this.email;
+        return String.format("Email:%s%nTipo%s%n", this.email,this.tipo);
     }
+
+
 }

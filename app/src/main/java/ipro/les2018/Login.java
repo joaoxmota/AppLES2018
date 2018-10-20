@@ -14,15 +14,11 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.JsonObjectRequest;
-import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
-import com.google.gson.reflect.TypeToken;
 
 import org.json.JSONObject;
 
-import java.lang.reflect.Type;
 
 import ipro.les2018.Model.Usuario;
 
@@ -30,7 +26,7 @@ public class Login extends AppCompatActivity {
     private EditText edtLogin,edtSenha;
     private TextView btnEntar,btnCadastrar, btnRecuperarSenha;
     private String login,senha,json;
-
+    Usuario us;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate ( savedInstanceState );
@@ -49,6 +45,7 @@ public class Login extends AppCompatActivity {
             btnEntar.setOnClickListener ( new View.OnClickListener () {
                 @Override
                 public void onClick(View v) {
+                    setJson ( "vazio" );
                     usuarioFromJson ();
                 }
             } );
@@ -77,20 +74,21 @@ public class Login extends AppCompatActivity {
 
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
-        String url = "http://192.168.15.4:8080/WebServ/webresources/generic/usuario/retornar/"+this.login+"/"+this.senha;
+        //String url = "http://192.168.15.4/PhpProject2/api-ins.php?id="+this.login;
+        String url = "http://stormsystems.com.br/api/api-ins.php?id="+this.login;
         JsonObjectRequest objectRequest = new JsonObjectRequest (
                 Request.Method.GET, url, null, new Response.Listener<JSONObject> () {
                 @Override
                 public void onResponse(JSONObject response) {
                     Log.e("Rest response", response.toString ());
                     setJson ( response.toString ());
+                    sendMessage ( json );
                     validarLogin ();
                 }
             }, new Response.ErrorListener () {
                 @Override
                 public void onErrorResponse(VolleyError error) {
                     Log.e("Rest error", error.toString ());
-                    setJson ( error.toString ());
 
                 }
             }
@@ -109,8 +107,8 @@ public class Login extends AppCompatActivity {
         Toast.makeText ( this, texto, Toast.LENGTH_SHORT ).show ();
     }
 
-    public boolean validarLogin(){
-        Usuario us;
+    public void validarLogin(){
+
         Gson g = new Gson ();
         us = g.fromJson ( this.json, Usuario.class );
         if(!(us.getEmail ().equals ( "noemail@nodomain.com" ))){
@@ -119,7 +117,6 @@ public class Login extends AppCompatActivity {
         }else{
             sendMessage ( "Usuario inválido" );
         }
-        return true;
     }
 }
 //PENDÊNCIA: Implementar o botão Entrar (Realização do Login)
