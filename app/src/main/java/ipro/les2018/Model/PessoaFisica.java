@@ -13,7 +13,6 @@ public class PessoaFisica extends Pessoa {
      * @param senha
      * @param tipo
      * @param nome
-     * @param endereco
      * @param telefone
      * @param celular
      * @param foto

@@ -75,7 +75,7 @@ public class Login extends AppCompatActivity {
 
         RequestQueue requestQueue = Volley.newRequestQueue(this);
         //String url = "http://192.168.15.4/PhpProject2/api-ins.php?id="+this.login;
-        String url = "http://stormsystems.com.br/api/api-ins.php?id="+this.login;
+        String url = "http://stormsystems.com.br/api/api-usuario-cons.php?login="+this.login+"&senha="+this.senha+"";
         JsonObjectRequest objectRequest = new JsonObjectRequest (
                 Request.Method.GET, url, null, new Response.Listener<JSONObject> () {
                 @Override
@@ -111,11 +111,12 @@ public class Login extends AppCompatActivity {
 
         Gson g = new Gson ();
         us = g.fromJson ( this.json, Usuario.class );
-        if(!(us.getEmail ().equals ( "noemail@nodomain.com" ))){
+        sendMessage ( us.getLogin () );
+        if(us.getLogin ().equals ( "" )){
+            sendMessage ( "Usuario inválido" );
+        }else{
             Intent it = new Intent ( this,Home.class );
             startActivity ( it );
-        }else{
-            sendMessage ( "Usuario inválido" );
         }
     }
 }

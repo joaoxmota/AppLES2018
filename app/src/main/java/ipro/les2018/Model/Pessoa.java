@@ -3,7 +3,6 @@ package ipro.les2018.Model;
 public class Pessoa extends Usuario {
 
     private String nome;
-    private Endereco endereco;
     private String telefone;
     private String celular;
     private String foto;
@@ -11,7 +10,6 @@ public class Pessoa extends Usuario {
     public Pessoa(String email, String senha, String tipo, String nome, Endereco endereco, String telefone, String celular, String foto, String status_usuario) {
         super ( email, senha,tipo, status_usuario);
         this.nome = nome;
-        this.endereco = endereco;
         this.telefone = telefone;
         this.celular = celular;
         this.foto = foto;
@@ -19,14 +17,12 @@ public class Pessoa extends Usuario {
 
     public Pessoa(String nome, Endereco endereco, String telefone, String celular, String foto) {
         this.nome = nome;
-        this.endereco = endereco;
         this.telefone = telefone;
         this.celular = celular;
         this.foto = foto;
     }
     public Pessoa() {
         this.nome = "";
-        this.endereco = new Endereco ( );
         this.telefone = "";
         this.celular = "";
         this.foto = "";
@@ -38,14 +34,6 @@ public class Pessoa extends Usuario {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public Endereco getEndereco() {
-        return endereco;
-    }
-
-    public void setEndereco(Endereco endereco) {
-        this.endereco = endereco;
     }
 
     public String getTelefone() {
@@ -74,6 +62,6 @@ public class Pessoa extends Usuario {
 
     @Override
     public String toString() {
-        return String.format ( "Nome: %s%nEmail: %s",getNome (),getEmail () );
+        return String.format ( "Nome: %s%nEmail: %s",getNome (), getLogin () );
     }
 }
