@@ -151,13 +151,23 @@ public class Pessoa  {
 
     
 
-    public String getavaliacao() {
+    public double getavaliacao() {
         return avaliacao;
     }
 
-    public void setAvaliacao(String avaliacao) {
+    public void setAvaliacao(double avaliacao) {
         this.avaliacao = avaliacao;
     }
+
+    public Especialidade[] getEspecialidade() {
+        return especialidade;
+    }
+
+    public void setEspecialidade(Especialidade[] especialidade) {
+        this.especialidade = especialidade;
+    }
+    
+    
 
     public Pessoa() {
         this.login = "";
@@ -171,7 +181,8 @@ public class Pessoa  {
         this.foto = "";
         this.dataNascimento = "";
         this.identidade = "";
-        this.avaliacao = "";
+        this.avaliacao = 0;
+        
     }
 
     
