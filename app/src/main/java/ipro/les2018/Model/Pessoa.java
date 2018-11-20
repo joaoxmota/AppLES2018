@@ -30,9 +30,10 @@ public class Pessoa  {
     String dataNascimento;
     String identidade;
     //alterar caso não seja o tipo de dado correto
-    String avaliacao;
+    double avaliacao;
+    Especialidade[] especialidade;
 
-    public Pessoa(String login, String senha, String tipo, String nome, String telefone, String celular, String foto, String dataNascimento,String identidade,String avaliacao) {
+    public Pessoa(String login, String senha, String tipo, String nome, String telefone, String celular, String foto, String dataNascimento,String identidade,double avaliacao, Especialidade[] especialidade) {
         
         this.login = login;
         this.senha = senha;
@@ -44,6 +45,8 @@ public class Pessoa  {
         this.dataNascimento = dataNascimento;
         this.identidade = identidade;
         this.avaliacao = avaliacao;
+        this.especialidade = especialidade;
+        
     }
 
     public int getId() {
