@@ -21,26 +21,28 @@ public class Pessoa  {
     String tipo;
     String status;
     String nome;
-    //private Endereco endereco;
+    String sobrenome;
+    //alterar caso não seja o tipo de dado correto
     String telefone;
     String celular;
     String foto;
-    //alterar
+    //alterar caso não seja o tipo de dado correto
     String dataNascimento;
-    String Identidade;
-    //Alterar
-    String Especialidade;
+    String identidade;
+    //alterar caso não seja o tipo de dado correto
     String avaliacao;
 
-    public Pessoa(String login, String senha, String tipo, String nome, String telefone, String celular, String foto, String dataNascimento,String Identidade,String Especialidade,String avaliacao) {
+    public Pessoa(String login, String senha, String tipo, String nome, String telefone, String celular, String foto, String dataNascimento,String identidade,String avaliacao) {
         
+        this.login = login;
+        this.senha = senha;
+        this.tipo = tipo;
         this.nome = nome;
         this.telefone = telefone;
         this.celular = celular;
         this.foto = foto;
         this.dataNascimento = dataNascimento;
-        this.Identidade = Identidade;
-        this.Especialidade = Especialidade;
+        this.identidade = identidade;
         this.avaliacao = avaliacao;
     }
 
@@ -76,56 +78,34 @@ public class Pessoa  {
         this.tipo = tipo;
     }
 
-   
-
-    public String getDataNascimento() {
-        return dataNascimento;
+    public String getStatus() {
+        return status;
     }
 
-    public void setDataNascimento(String dataNascimento) {
-        this.dataNascimento = dataNascimento;
+    public void setStatus(String status) {
+        this.status = status;
     }
-
-    public String getIdentidade() {
-        return Identidade;
-    }
-
-    public void setIdentidade(String Identidade) {
-        this.Identidade = Identidade;
-    }
-
-    public String getEspecialidade() {
-        return Especialidade;
-    }
-
-    public void setEspecialidade(String Especialidade) {
-        this.Especialidade = Especialidade;
-    }
-
-    public String getavaliacao() {
-        return avaliacao;
-    }
-
-    public void setAvaliacao(String avaliacao) {
-        this.avaliacao = avaliacao;
-    }
-
-   
-    public Pessoa() {
-        this.nome = "";
-        this.telefone = "";
-        this.celular = "";
-        this.foto = "";
-    }
-
+    
+    
     public String getNome() {
         return nome;
     }
+    
 
     public void setNome(String nome) {
         this.nome = nome;
     }
 
+    public String getSobrenome() {
+        return sobrenome;
+    }
+
+    public void setSobrenome(String sobrenome) {
+        this.sobrenome = sobrenome;
+    }
+   
+
+    
     public String getTelefone() {
         return telefone;
     }
@@ -149,6 +129,52 @@ public class Pessoa  {
     public void setFoto(String foto) {
         this.foto = foto;
     }
+   
+    public String getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(String dataNascimento) {
+        this.dataNascimento = dataNascimento;
+    }
+
+    public String getidentidade() {
+        return identidade;
+    }
+
+    public void setIdentidade(String identidade) {
+        this.identidade = identidade;
+    }
+
+    
+
+    public String getavaliacao() {
+        return avaliacao;
+    }
+
+    public void setAvaliacao(String avaliacao) {
+        this.avaliacao = avaliacao;
+    }
+
+    public Pessoa() {
+        this.login = "";
+        this.senha = "";
+        this.tipo = "";
+        this.status = "";
+        this.nome = "";
+        this.sobrenome = "";
+        this.telefone = "";
+        this.celular = "";
+        this.foto = "";
+        this.dataNascimento = "";
+        this.identidade = "";
+        this.avaliacao = "";
+    }
+
+    
+
+    
+    
 
     /*@Override
     public String toString() {
