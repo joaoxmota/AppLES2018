@@ -1,31 +1,61 @@
-package ipro.les2018.Model;
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
 
-public class Endereco {
+
+/**
+ *
+ * @author JM
+ */
+/*public class Pessoa {
+    
+}*/
+//package ipro.les2018.Model;
+
+public class Endereco  {
+    private int id;
     private String rua;
     private String bairro;
     private int numero;
     private String cidade;
     private String estado;
     private String pais;
-    private String cep;
 
-    public Endereco(String rua, String bairro, int numero, String cidade, String estado, String pais, String cep) {
+    /**
+     *
+    
+     */
+    public Endereco(int id,String rua, String bairro, int numero, String cidade, String estado, String pais) {
+        //super ( login, senha,tipo, status_usuario);
+        this.id = id;
         this.rua = rua;
         this.bairro = bairro;
         this.numero = numero;
         this.cidade = cidade;
         this.estado = estado;
         this.pais = pais;
-        this.cep = cep;
+        
     }
+
+   
     public Endereco() {
+        this.id = -1;
         this.rua = "";
         this.bairro = "";
-        this.numero = 0;
+        this.numero = -1;
         this.cidade = "";
         this.estado = "";
         this.pais = "";
-        this.cep = "";
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getRua() {
@@ -76,16 +106,11 @@ public class Endereco {
         this.pais = pais;
     }
 
-    public String getCep() {
-        return cep;
-    }
-
-    public void setCep(String cep) {
-        this.cep = cep;
-    }
-
-    @Override
+    
+    /*@Override
     public String toString() {
-        return String.format ( "Rua: %s Numero: %d%nBairro: %s CEP: %s",this.rua,this.numero,this.bairro,this.cep );
-    }
+        return String.format ( "Nome: %s%nLogin: %s",getNome (),getLogin () );
+    }*/
 }
+
+
