@@ -1,3 +1,6 @@
+
+import java.util.GregorianCalendar;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -27,13 +30,13 @@ public class Pessoa  {
     String celular;
     String foto;
     //alterar caso não seja o tipo de dado correto
-    String dataNascimento;
+    GregorianCalendar dataNascimento;
     String identidade;
     //alterar caso não seja o tipo de dado correto
     double avaliacao;
     Especialidade[] especialidade;
 
-    public Pessoa(String login, String senha, String tipo, String nome, String telefone, String celular, String foto, String dataNascimento,String identidade,double avaliacao, Especialidade[] especialidade) {
+    public Pessoa(String login, String senha, String tipo, String nome, String telefone, String celular, String foto, GregorianCalendar dataNascimento,String identidade,double avaliacao, Especialidade[] especialidade) {
         
         this.login = login;
         this.senha = senha;
@@ -132,14 +135,16 @@ public class Pessoa  {
     public void setFoto(String foto) {
         this.foto = foto;
     }
-   
-    public String getDataNascimento() {
+
+    public GregorianCalendar getDataNascimento() {
         return dataNascimento;
     }
 
-    public void setDataNascimento(String dataNascimento) {
+    public void setDataNascimento(GregorianCalendar dataNascimento) {
         this.dataNascimento = dataNascimento;
     }
+   
+    
 
     public String getidentidade() {
         return identidade;
