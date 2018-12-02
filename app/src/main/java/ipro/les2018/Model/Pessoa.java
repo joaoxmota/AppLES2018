@@ -15,7 +15,7 @@ import java.util.GregorianCalendar;
 /*public class Pessoa {
     
 }*/
-//package ipro.les2018.Model;
+package ipro.les2018.Model;
 
 public class Pessoa  {
     int id;
@@ -36,6 +36,8 @@ public class Pessoa  {
     double avaliacao;
     Especialidade[] especialidade;
 
+    
+   
     public Pessoa(String login, String senha, String tipo, String nome, String telefone, String celular, String foto, GregorianCalendar dataNascimento,String identidade,double avaliacao, Especialidade[] especialidade) {
         
         this.login = login;
@@ -184,7 +186,7 @@ public class Pessoa  {
         this.telefone = "";
         this.celular = "";
         this.foto = "";
-        this.dataNascimento = "";
+        this.dataNascimento.set(2018, 12, 03);
         this.identidade = "";
         this.avaliacao = 0;
         
