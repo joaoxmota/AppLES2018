@@ -63,5 +63,13 @@ public class Servico {
         this.duracao = duracao;
     }
     
+    public Servico() {
+        this.id = 0;
+        this.nome = "";
+        this.valor = 0;
+        this.duracao = 0;
+        
+        
+    }
     
 }
